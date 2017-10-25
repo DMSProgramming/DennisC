@@ -39,7 +39,7 @@ void keyPressed() {
 
   if (keyCode === RIGHT) {
     dir = 0;
-  } else if (keyCode === LEFT) {
+  } else if (keyCode === DOWN) {
     dir = 1;
   }
 

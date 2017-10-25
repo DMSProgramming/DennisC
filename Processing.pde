@@ -9,12 +9,17 @@ void setup() {
 
 }
 
-var x = 0;
+var x = -15;
 
 void draw() {
 
-    background(150, 216, 255);
-    rect(x, 30, 30, 30);
-    x += 3;
+  background(150, 216, 255);
+  fill(0, 0, 0);
+  rect(x, 30, 30, 30);
+  x += 3;
+    
+  if (x > 416) {
+    x = -15;
+  }
     
 }

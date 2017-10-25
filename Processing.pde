@@ -1,9 +1,7 @@
 
-void setup()
+void setup() {
 
-{
-
-  size(200, 200);
+  size(800, 800);
 
   rectMode(CENTER_RADIUS);
 
@@ -11,12 +9,12 @@ void setup()
 
 }
 
+var x = 0;
 
+void draw() {
 
-void draw() 
-
-{
-
-  
-
+    background(150, 216, 255);
+    rect(x, 40, 40, 40);
+    x++;
+    
 }

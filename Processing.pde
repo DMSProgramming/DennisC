@@ -7,14 +7,14 @@ void setup() {
 
   ellipseMode(CENTER_RADIUS);
   
-  setInterval(playerMove, 500);
+  setInterval(playerMove, 1500);
 
 }
 
 var x = 300;
 var y = 300;
 var dir = 0;
-var speed = 20;
+var speed = 30;
 
 void draw() {
 

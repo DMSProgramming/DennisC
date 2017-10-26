@@ -17,7 +17,8 @@ var dir = 0;
 var speed = 20;
 var firstrun = true;
 var length = 5;
-var snakeA = new Rect[];
+var snakeA = [];
+var snake = {x: 300, y: 300};
 
 void draw() {
 
@@ -25,11 +26,11 @@ void draw() {
     firstrun = false;
     background(0, 0, 0);
     fill(66, 244, 69);
-    snakeA.push(Rectangle(x, y, 10, 10));
-    snakeA.push(Rectangle(x - 20, y, 10, 10));
-    snakeA.push(Rectangle(x - 40, y, 10, 10));
-    snakeA.push(Rectangle(x - 60, y, 10, 10));
-    snakeA.push(Rectangle(x - 80, y, 10, 10));
+    snakeA.push(new snake(x, y));
+    snakeA.push(new snake(x - 20, y));
+    snakeA.push(new snake(x - 40, y));
+    snakeA.push(new snake(x - 60, y));
+    snakeA.push(new snake(x - 80, y));
   }
 
   background(0, 0, 0);
@@ -39,11 +40,13 @@ void draw() {
     
     if (i != snakeA.length) {
       snakeA[snakeA.length - (i + 1)].x = snakeA[snakeA.length - (i + 2)].x;
+      
+      snakeA[snakeA.length - (i + 1)].y = snakeA[snakeA.length - (i + 2)].y;
     }
     
-    Rectangle(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y, 10, 10);
+    rect(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y, 10, 10);
     
-    snakeA[i + 1] = Rectangle(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y, 10, 10)
+    snakeA[i + 1] = new snake(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y)
   }
     
   if (x > 610) {

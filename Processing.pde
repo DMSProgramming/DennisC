@@ -25,11 +25,11 @@ void draw() {
     firstrun = false;
     background(0, 0, 0);
     fill(66, 244, 69);
-    snakeA.push(rect(x, y, 10, 10));
-    snakeA.push(rect(x - 20, y, 10, 10));
-    snakeA.push(rect(x - 40, y, 10, 10));
-    snakeA.push(rect(x - 60, y, 10, 10));
-    snakeA.push(rect(x - 80, y, 10, 10));
+    snakeA.push(Rectangle(x, y, 10, 10));
+    snakeA.push(Rectangle(x - 20, y, 10, 10));
+    snakeA.push(Rectangle(x - 40, y, 10, 10));
+    snakeA.push(Rectangle(x - 60, y, 10, 10));
+    snakeA.push(Rectangle(x - 80, y, 10, 10));
   }
 
   background(0, 0, 0);
@@ -41,7 +41,9 @@ void draw() {
       snakeA[snakeA.length - (i + 1)].x = snakeA[snakeA.length - (i + 2)].x;
     }
     
-    rect(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y, 10, 10);
+    Rectangle(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y, 10, 10);
+    
+    snakeA[i + 1] = Rectangle(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y, 10, 10)
   }
     
   if (x > 610) {

@@ -17,7 +17,7 @@ var dir = 0;
 var speed = 20;
 var firstrun = true;
 var length = 5;
-var snakeA = [];
+var snakeA = new Rect[];
 
 void draw() {
 

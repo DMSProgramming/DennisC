@@ -31,26 +31,6 @@ void draw() {
     snakeA.push(new snake(x - 60, y));
     snakeA.push(new snake(x - 80, y));
   }
-
-  background(0, 0, 0);
-  
-  for (var i = 0; i < snakeA.length; i++) {
-    fill(66, 244, 69);
-    
-    if (i != snakeA.length - 1) {
-      snakeA[snakeA.length - (i + 1)].x = snakeA[snakeA.length - (i + 2)].x;
-      
-      snakeA[snakeA.length - (i + 1)].y = snakeA[snakeA.length - (i + 2)].y;
-      
-      rect(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y, 10, 10);
-      
-      snakeA[i + 1] = new snake(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y);
-    } else {
-      rect(x, y, 10, 10);
-      
-      snakeA[i + 1] = new snake(x, y);
-    }
-  }
     
   if (x > 610) {
     x = -10;
@@ -79,6 +59,26 @@ void playerMove() {
     y += speed;
   } else if (dir == 3) {
     y -= speed;
+  }
+  
+  background(0, 0, 0);
+  
+  for (var i = 0; i < snakeA.length; i++) {
+    fill(66, 244, 69);
+    
+    if (i != (snakeA.length - 1)) {
+      snakeA[snakeA.length - (i + 1)].x = snakeA[snakeA.length - (i + 2)].x;
+      
+      snakeA[snakeA.length - (i + 1)].y = snakeA[snakeA.length - (i + 2)].y;
+      
+      rect(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y, 10, 10);
+      
+      snakeA[i + 1] = new snake(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y);
+    } else {
+      rect(x, y, 10, 10);
+      
+      snakeA[i + 1] = new snake(x, y);
+    }
   }
 }
 

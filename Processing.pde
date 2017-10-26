@@ -19,9 +19,9 @@ void draw() {
   fill(0, 0, 0);
   rect(x, y, 30, 30);
   
-  if (dir === 0) {
+  if (dir == 0) {
     x += 3;
-  } else {
+  } else if (dir == 2) {
     y += 3;
   }
     
@@ -37,10 +37,10 @@ void draw() {
 
 void keyPressed() {
 
-  if (keyCode === RIGHT) {
+  if (keyCode == RIGHT) {
     dir = 0;
-  } else if (keyCode === DOWN) {
-    dir = 1;
+  } else if (keyCode == DOWN) {
+    dir = 2;
   }
 
 }

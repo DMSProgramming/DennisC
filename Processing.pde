@@ -6,29 +6,21 @@ void setup() {
   rectMode(CENTER_RADIUS);
 
   ellipseMode(CENTER_RADIUS);
+  
+  setInterval(playerMove, 500);
 
 }
 
-var x = -20;
-var y = 40;
+var x = 300;
+var y = 300;
 var dir = 0;
-var speed = 3;
+var speed = 20;
 
 void draw() {
 
   background(0, 0, 0);
   fill(66, 244, 69);
   rect(x, y, 30, 30);
-  
-  if (dir == 0) {
-    x += speed;
-  } else if (dir == 1) {
-    x -= speed;
-  } else if (dir == 2) {
-    y += speed;
-  } else if (dir == 3) {
-    y -= speed;
-  }
     
   if (x > 630) {
     x = -30;
@@ -46,6 +38,18 @@ void draw() {
     y = 630;
   }
     
+}
+
+void playerMove() {
+  if (dir == 0) {
+    x += speed;
+  } else if (dir == 1) {
+    x -= speed;
+  } else if (dir == 2) {
+    y += speed;
+  } else if (dir == 3) {
+    y -= speed;
+  }
 }
 
 void keyPressed() {

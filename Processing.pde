@@ -45,7 +45,7 @@ void draw() {
     
     rect(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y, 10, 10);
     
-    snakeA[i + 1] = new snake(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y)
+    snakeA[i + 1] = new snake(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y);
   }
     
   if (x > 610) {

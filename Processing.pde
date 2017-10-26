@@ -65,17 +65,17 @@ void playerMove() {
     fill(66, 244, 69);
     
     if (i != (length - 1)) {
-      snakeA[snakeA.length - (i + 1)].x = snakeA[snakeA.length - (i + 2)].x;
+      snakeA[length - (i + 1)].x = snakeA[length - (i + 2)].x;
       
-      snakeA[snakeA.length - (i + 1)].y = snakeA[snakeA.length - (i + 2)].y;
+      snakeA[length - (i + 1)].y = snakeA[length - (i + 2)].y;
       
-      rect(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y, 10, 10);
+      rect(snakeA[length - (i + 1)].x, snakeA[length - (i + 1)].y, 10, 10);
       
-      snakeA[i + 1] = new snake(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y);
+      snakeA[i + 1] = new snake(snakeA[length - (i + 1)].x, snakeA[length - (i + 1)].y);
     } else {
       rect(x, y, 10, 10);
       
-      snakeA[i + 1] = new snake(x, y);
+      snakeA[0] = new snake(x, y);
     }
   }
   

@@ -7,7 +7,7 @@ void setup() {
 
   ellipseMode(CENTER_RADIUS);
   
-  setInterval(playerMove, 1500);
+  setInterval(playerMove, 250);
 
 }
 

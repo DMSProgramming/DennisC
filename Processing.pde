@@ -18,7 +18,6 @@ var speed = 20;
 var firstrun = true;
 var length = 5;
 var snakeA = [];
-var snake = {x: 300, y: 300};
 
 void draw() {
 
@@ -26,11 +25,11 @@ void draw() {
     firstrun = false;
     background(0, 0, 0);
     fill(66, 244, 69);
-    snakeA.push(snake(x, y));
-    snakeA.push(snake(x - 20, y));
-    snakeA.push(snake(x - 40, y));
-    snakeA.push(snake(x - 60, y));
-    snakeA.push(snake(x - 80, y));
+    snakeA.push(new snake(x, y));
+    snakeA.push(new snake(x - 20, y));
+    snakeA.push(new snake(x - 40, y));
+    snakeA.push(new snake(x - 60, y));
+    snakeA.push(new snake(x - 80, y));
   }
 
   background(0, 0, 0);
@@ -80,7 +79,6 @@ void playerMove() {
 }
 
 void keyPressed() {
-
   if (keyCode == RIGHT && dir != 1) {
     dir = 0;
   } else if (keyCode == LEFT && dir != 0) {
@@ -90,5 +88,9 @@ void keyPressed() {
   } else if (keyCode == UP && dir != 2) {
     dir = 3;
   }
+}
 
+function snake(x, y) {
+  this.x = x;
+  this.y = y;
 }

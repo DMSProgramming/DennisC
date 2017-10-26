@@ -15,12 +15,34 @@ var x = 300;
 var y = 300;
 var dir = 0;
 var speed = 20;
+var firstrun = true;
+var length = 5;
+var snakeA = [];
 
 void draw() {
 
+  if (firstrun == true) {
+    firstrun = false;
+    background(0, 0, 0);
+    fill(66, 244, 69);
+    snakeA.pop(rect(x, y, 10, 10));
+    snakeA.pop(rect(x - 20, y, 10, 10));
+    snakeA.pop(rect(x - 40, y, 10, 10));
+    snakeA.pop(rect(x - 60, y, 10, 10));
+    snakeA.pop(rect(x - 80, y, 10, 10));
+  }
+
   background(0, 0, 0);
-  fill(66, 244, 69);
-  rect(x, y, 10, 10);
+  
+  for (var i = 0; i < snakeA.length; i++) {
+    fill(66, 244, 69);
+    
+    if (i != snakeA.length) {
+      snakeA[snakeA.length - (i + 1)].x = snakeA[snakeA.length - (i + 2)].x;
+    }
+    
+    rect(snakeA[snakeA.length - (i + 1)].x, snakeA[snakeA.length - (i + 1)].y, 10, 10);
+  }
     
   if (x > 610) {
     x = -10;

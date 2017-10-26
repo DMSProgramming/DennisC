@@ -14,28 +14,28 @@ void setup() {
 var x = 300;
 var y = 300;
 var dir = 0;
-var speed = 30;
+var speed = 20;
 
 void draw() {
 
   background(0, 0, 0);
   fill(66, 244, 69);
-  rect(x, y, 30, 30);
+  rect(x, y, 10, 10);
     
-  if (x > 630) {
-    x = -30;
+  if (x > 610) {
+    x = -10;
   }
   
-  if (x < -30) {
-    x = 630;
+  if (x < -10) {
+    x = 610;
   }
   
-  if (y > 630) {
-    y = -30;
+  if (y > 610) {
+    y = -10;
   }
   
-  if (y < -30) {
-    y = 630;
+  if (y < -10) {
+    y = 610;
   }
     
 }

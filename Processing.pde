@@ -26,11 +26,11 @@ void draw() {
     firstrun = false;
     background(0, 0, 0);
     fill(66, 244, 69);
-    snakeA.push(new snake(x, y));
-    snakeA.push(new snake(x - 20, y));
-    snakeA.push(new snake(x - 40, y));
-    snakeA.push(new snake(x - 60, y));
-    snakeA.push(new snake(x - 80, y));
+    snakeA.push(snake(x, y));
+    snakeA.push(snake(x - 20, y));
+    snakeA.push(snake(x - 40, y));
+    snakeA.push(snake(x - 60, y));
+    snakeA.push(snake(x - 80, y));
   }
 
   background(0, 0, 0);

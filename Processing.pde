@@ -23,8 +23,6 @@ void draw() {
 
   if (firstrun == true) {
     firstrun = false;
-    background(0, 0, 0);
-    fill(66, 244, 69);
     snakeA.push(new snake(x, y));
     snakeA.push(new snake(x - 20, y));
     snakeA.push(new snake(x - 40, y));

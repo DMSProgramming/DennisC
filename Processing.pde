@@ -37,7 +37,7 @@ void draw() {
   for (var i = 0; i < snakeA.length; i++) {
     fill(66, 244, 69);
     
-    if (i != snakeA.length - 1) {
+    if (i != snakeA.length) {
       snakeA[snakeA.length - (i + 1)].x = snakeA[snakeA.length - (i + 2)].x;
       
       snakeA[snakeA.length - (i + 1)].y = snakeA[snakeA.length - (i + 2)].y;

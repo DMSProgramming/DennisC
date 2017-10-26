@@ -54,13 +54,13 @@ void playerMove() {
 
 void keyPressed() {
 
-  if (keyCode == RIGHT) {
+  if (keyCode == RIGHT && dir != 1) {
     dir = 0;
-  } else if (keyCode == LEFT) {
+  } else if (keyCode == LEFT && dir != 0) {
     dir = 1;
-  } else if (keyCode == DOWN) {
+  } else if (keyCode == DOWN && dir != 3) {
     dir = 2;
-  } else if (keyCode == UP) {
+  } else if (keyCode == UP && dir != 2) {
     dir = 3;
   }
 

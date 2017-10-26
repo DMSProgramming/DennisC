@@ -64,7 +64,7 @@ void playerMove() {
   for (var i = 0; i < snakeA.length; i++) {
     fill(66, 244, 69);
     
-    if (i != (snakeA.length)) {
+    if (i != (length - 1)) {
       snakeA[snakeA.length - (i + 1)].x = snakeA[snakeA.length - (i + 2)].x;
       
       snakeA[snakeA.length - (i + 1)].y = snakeA[snakeA.length - (i + 2)].y;
@@ -78,6 +78,8 @@ void playerMove() {
       snakeA[i + 1] = new snake(x, y);
     }
   }
+  
+  snakeA.length = length;
 }
 
 void keyPressed() {

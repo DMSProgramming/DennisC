@@ -78,6 +78,8 @@ void playerMove() {
     }
   }
   
+  fill(66, 244, 69);
+  
   text(x + " " + y, 10, 10);
   
   snakeA.length = length;

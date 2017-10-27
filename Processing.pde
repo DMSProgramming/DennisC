@@ -80,7 +80,11 @@ void playerMove() {
   
   fill(66, 244, 69);
   
-  text(x + " " + y, 10, 10);
+  PFont font = LoadFont("font.tff", 32);
+  
+  textFont(font);
+  
+  text(x + " " + y, 10, 10, 100, 100);
   
   snakeA.length = length;
 }

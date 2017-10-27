@@ -59,15 +59,6 @@ void draw() {
 }
 
 void playerMove() {
-  if (dir == 0) {
-    x += speed;
-  } else if (dir == 1) {
-    x -= speed;
-  } else if (dir == 2) {
-    y += speed;
-  } else if (dir == 3) {
-    y -= speed;
-  }
   
   background(0, 0, 0);
   
@@ -101,6 +92,16 @@ void playerMove() {
       rect(x, y, 10, 10);
       
       snake[length - 1] = new snake(x, y);
+    }
+    
+    if (dir == 0) {
+      x += speed;
+    } else if (dir == 1) {
+      x -= speed;
+    } else if (dir == 2) {
+      y += speed;
+    } else if (dir == 3) {
+      y -= speed;
     }
   }
   

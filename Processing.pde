@@ -90,9 +90,9 @@ void playerMove() {
     }
     */
     
-    if (i != 0) {
-      snakeA[i].x = snakeA[i - 1].x;
-      snakeA[i].y = snakeA[i - 1].y;
+    if (i != (length - 1)) {
+      snakeA[i].x = snakeA[i + 1].x;
+      snakeA[i].y = snakeA[i + 1].y;
       
       rect(snakeA[i].x, snakeA[i].y, 10, 10);
       
@@ -100,7 +100,7 @@ void playerMove() {
     } else { 
       rect(x, y, 10, 10);
       
-      snake[0] = new snake(x, y);
+      snake[length - 1] = new snake(x, y);
     }
   }
   

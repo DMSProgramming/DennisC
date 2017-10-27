@@ -66,7 +66,7 @@ void playerMove() {
     fill(66, 244, 69);
     
     if (i != (length - 1)) {
-      snakeA[i] = snakeA[i + 1];
+      snakeA[i] = new snakeA[i + 1];
       
       rect(snakeA[i].x, snakeA[i].y, 10, 10);
       

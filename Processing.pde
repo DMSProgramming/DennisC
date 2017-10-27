@@ -75,6 +75,8 @@ void playerMove() {
       rect(x, y, 10, 10);
       
       snake[length - 1] = new snake(x, y);
+      
+      text(x + " " + y, 10, 10);
     }
   }
   

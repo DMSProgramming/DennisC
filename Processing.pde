@@ -7,6 +7,8 @@ void setup() {
 
   ellipseMode(CENTER_RADIUS);
   
+  textMode(SCREEN);
+  
   setInterval(playerMove, 350);
 
 }
@@ -84,7 +86,11 @@ void playerMove() {
   
   textFont(font);
   
-  text(x + " " + y, 10, 10, 100, 100);
+  textAlign(RIGHT);
+  
+  String s = x + " " y;
+  
+  text(s, 10, 10);
   
   snakeA.length = length;
 }

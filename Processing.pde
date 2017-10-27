@@ -82,7 +82,7 @@ void playerMove() {
   
   fill(66, 244, 69);
   
-  PFont font = LoadFont("font.ttf", 32);
+  PFont font = LoadFont("font.ttf");
   
   textFont(font);
   

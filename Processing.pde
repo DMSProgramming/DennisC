@@ -76,7 +76,7 @@ void playerMove() {
     } else { 
       rect(px, py, 10, 10);
       
-      snake[length - 1] = new snake(x, y);
+      snake[length - 1] = new snake(px, py);
     }
   }
   

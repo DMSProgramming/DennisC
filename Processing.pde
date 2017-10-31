@@ -13,8 +13,8 @@ void setup() {
 
 }
 
-var x = 310;
-var y = 310;
+var px = 310;
+var py = 310;
 var dir = 0;
 var speed = 20;
 var firstrun = true;
@@ -25,27 +25,27 @@ void draw() {
   if (firstrun == true) {
     firstrun = false;
     
-    snakeA.unshift(new snake(x, y));
-    snakeA.unshift(new snake(x - 20, y));
-    snakeA.unshift(new snake(x - 40, y));
-    snakeA.unshift(new snake(x - 60, y));
-    snakeA.unshift(new snake(x - 80, y));
+    snakeA.unshift(new snake(px, py));
+    snakeA.unshift(new snake(px - 20, py));
+    snakeA.unshift(new snake(px - 40, py));
+    snakeA.unshift(new snake(px - 60, py));
+    snakeA.unshift(new snake(px - 80, py));
   }
     
-  if (x > 610) {
-    x = -10;
+  if (px > 610) {
+    px = -10;
   }
   
-  if (x < -10) {
-    x = 610;
+  if (px < -10) {
+    px = 610;
   }
   
-  if (y > 610) {
-    y = -10;
+  if (py > 610) {
+    py = -10;
   }
   
-  if (y < -10) {
-    y = 610;
+  if (py < -10) {
+    py = 610;
   }
     
 }
@@ -55,13 +55,13 @@ void playerMove() {
   background(0, 0, 0);
   
   if (dir == 0) {
-    x += speed;
+    px += speed;
   } else if (dir == 1) {
-    x -= speed;
+    px -= speed;
   } else if (dir == 2) {
-    y += speed;
+    py += speed;
   } else if (dir == 3) {
-    y -= speed;
+    py -= speed;
   }
   
   for (var i = 0; i < snakeA.length; i++) {
@@ -74,23 +74,23 @@ void playerMove() {
       
       snakeA[i] = new snake(snakeA[i].x, snakeA[i].y, 10, 10);
     } else { 
-      rect(x, y, 10, 10);
+      rect(px, py, 10, 10);
       
       snake[length - 1] = new snake(x, y);
     }
   }
   
-  fill(66, 244, 69);
+  //fill(66, 244, 69);
   
-  PFont font = LoadFont("font.ttf");
+  //PFont font = LoadFont("font.ttf");
   
-  textFont(font);
+  //textFont(font);
   
-  textAlign(RIGHT);
+  //textAlign(RIGHT);
   
-  String s = x + " " y;
+  //String s = px + " " py;
   
-  text(s, 10, 10);
+  //text(s, 10, 10);
   
   snakeA.length = length;
 }
